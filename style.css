@@ -2,39 +2,47 @@ body , html{
     padding: 0;
     margin: 0;
 }
-.conteiner{
+/* .conteiner{
     margin: 0 auto;
     background-color: aqua;
     width: 90%;
     padding: 5px;
-}
+} */
 header{
     height: 60px;
 }
 .header{
     background-color: beige;
-    width: 100%;
-    margin: 0 auto;
+    height: 60px;
+    grid-area: header;
+
 }
 section{
     background-color: rgb(132, 86, 175);
-    display: flex;
-    /* flex-direction: column-reverse; */
-    /* padding: 5px; */
+    /* display: flex; */
 }
 article{
     background-color: brown;
-    width: 75%;
-    float: right;
+    grid-area: content;
     height: 240px;
 }
 nav{
-    width: 25%;
-    float: left;
     background-color: antiquewhite;
-    /* height: 240px; */
+    grid-area: menu;
 }
 footer{
     height: 80px;
     background-color: yellow;
+    grid-area: footer;
+}
+.conteiner{
+    margin: 0 auto;
+    background-color: aqua;
+    width: 95%;
+    display: grid;
+    grid-template-areas: 
+    'header header header header'
+    'menu content content content'
+    'footer footer footer footer '
+    ;
 }
